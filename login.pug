@@ -1,0 +1,38 @@
+
+
+doctype html
+html
+  head
+    title Login
+    link(rel='stylesheet', href='https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css')
+    style
+      | body {
+      |   font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with your desired font */
+      | }
+      | label {
+      |   font-family: 'Your Desired Font', sans-serif; /* Apply the same font to labels */
+      | }
+      | .login-header {
+      |   font-size: 24px; /* Change the font size */
+      |   color: #333; /* Change the text color */
+      | }
+      | .login-form {
+      |   background-color: #f0f0f0; /* Change the background color */
+      |   padding: 20px; /* Adjust padding as needed */
+      |   border: 1px solid #ccc; /* Add a border */
+      |   border-radius: 5px; /* Add border radius */
+      | }
+
+  body
+    div(class='mx-auto max-w-md p-5 login-form') 
+      h1(class='text-2xl font-bold mb-3 login-header') Login /
+      form(action='/login', method='POST', class='space-y-4')
+        div(class='flex flex-col')
+          label(for='username', class='text-lg mb-1') Username:
+          input(type='text', id='username', name='username', class='p-2 border rounded')
+
+        div(class='flex flex-col')
+          label(for='password', class='text-lg mb-1') Password:
+          input(type='password', id='password', name='password', class='p-2 border rounded')
+
+        button(type='submit', class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto') | Se connecter

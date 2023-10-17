@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title Registration
+    link(rel='stylesheet', href='https://unpkg.com/tailwindcss@^2.2.19/dist/tailwind.min.css')
+  body
+    div(class='mx-auto max-w-md p-5')
+      h1(class='text-2xl font-bold mb-3') Registration
+      form(action='/register', method='POST', class='space-y-4')
+        div(class='flex flex-col')
+          label(for='username', class='text-lg mb-1') Username:
+          input(type='text', id='username', name='username', class='p-2 border rounded')
+          div(class='flex flex-col')
+          label(for='password', class='text-lg mb-1') Password:
+          input(type='password', id='password', name='password', class='p-2 border rounded')
+
+        button(type='submit', class='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto') | Register
